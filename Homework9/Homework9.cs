@@ -8,12 +8,13 @@ class Program
         Student Cathy = new Student(333,"Cathy");
         Student David  = new Student(444,"David");
 
-        Console.WriteLine("The student list contains the following students:");
-        foreach (Student student in Student.StudentList)
-        {
-            Console.WriteLine(student.StudentName);
-        }
-
+        // Console.WriteLine("The student list contains the following students:");
+        // foreach (Student student in Student.StudentList)
+        // {
+        //     Console.WriteLine(student.StudentName);
+        // }
+        // used for debug
+        
         Student.Gradebook.Add("Alice",4.0);
         Student.Gradebook.Add("Bob",3.6);
         Student.Gradebook.Add("Cathy",2.5);
@@ -27,12 +28,12 @@ class Program
         {
             Student.Gradebook.Add("Tom",3.3);
         }
-        Console.WriteLine("The gradebook contains the following students:");
-        foreach (var student_name in Student.Gradebook.Keys) 
-        {
-            Console.WriteLine(student_name);
-        }
-            
+        // Console.WriteLine("The gradebook contains the following students:");
+        // foreach (var student_name in Student.Gradebook.Keys) 
+        // {
+        //     Console.WriteLine(student_name);
+        // }
+            // used for debug
 
         double averageGrade = 0;
         foreach (Student student in Student.StudentList)
@@ -61,7 +62,7 @@ class Program
 public class Student
 {
     private int studentId;
-    private string studentName;
+    private string? studentName;
 
     public static List<Student> StudentList = new List<Student>();
     public static Dictionary <string,double> Gradebook = new Dictionary<string,double>();
